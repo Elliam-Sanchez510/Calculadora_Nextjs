@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react';
+import Display from '../components/display';
 import Keyboard from '../components/keyboard';
 
 const Calculator: React.FC = () => {
@@ -20,15 +21,8 @@ const Calculator: React.FC = () => {
     };
 
     return (
-        <div className="bg-white p-10 rounded-lg shadow-lg">
-            <input
-                type="text"
-                className="p-6 w-full border border-gray-300 text-3xl text-right bg-gray-500 text-white rounded-tl-lg rounded-tr-lg"
-                placeholder="0"
-                readOnly
-                value={input}
-                style={{ marginTop: "0.2rem" }}
-            />
+        <div className=" border border-black p-1 rounded-lg shadow-lg">
+            <Display value={input} />
             <Keyboard onButtonClick={handleButtonClick} />
         </div>
     );

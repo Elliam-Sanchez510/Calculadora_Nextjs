@@ -1,6 +1,5 @@
 'use client'
 import React from 'react';
-
 interface DisplayProps {
     value: string;
 }
@@ -9,11 +8,10 @@ const Display: React.FC<DisplayProps> = ({ value }) => {
     return (
         <input
             type="text"
-            className="p-6 w-full border border-gray-400 text-3xl text-right bg-gray-500 text-white rounded-tl-lg rounded-tr-lg"
+            className="display-input w-full p-4 text-3xl text-right bg-gray-200 rounded-lg mb-4 border-none"
             placeholder="0"
             readOnly
             value={value}
-            style={{ marginTop: "0.2rem", width: "400px" }}
         />
     );
 };

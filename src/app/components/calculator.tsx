@@ -21,9 +21,11 @@ const Calculator: React.FC = () => {
     };
 
     return (
-        <div className=" border border-black p-1 rounded-lg shadow-lg">
-            <Display value={input} />
-            <Keyboard onButtonClick={handleButtonClick} />
+        <div className="flex justify-center items-center min-h-screen bg-gray-100">
+            <div className="calculator-container bg-white p-8 rounded-lg shadow-lg">
+                <Display value={input} />
+                <Keyboard onButtonClick={handleButtonClick} />
+            </div>
         </div>
     );
 };
